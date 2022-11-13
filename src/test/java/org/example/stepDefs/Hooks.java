@@ -20,11 +20,11 @@ public class Hooks {
         //2- create object from chrome browser
         driver = new ChromeDriver();
 
-<<<<<<< HEAD
+
         //3- Configurations:    implicitlyWait is deprecated
-=======
+
         //3- Configurations:    why implicitlyWait  is remarked
->>>>>>> origin/master
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
