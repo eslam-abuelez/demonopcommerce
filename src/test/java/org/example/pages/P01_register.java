@@ -45,5 +45,26 @@ public class P01_register {
         return driver.findElement(By.xpath("//div [@class=\"inputs date-of-birth\"]//select [@name=\"DateOfBirthYear\"]"));
     }
 
+    public WebElement email() {
+        return driver.findElement(By.id("Email"));
+    }
 
-}
+    public WebElement passwords() {
+        return (driver.findElement(By.id("Password")));
+
+    }
+    public WebElement confirmPasswords() {
+        return (driver.findElement(By.id("ConfirmPassword")));
+
+    }
+
+
+
+    public WebElement clickRegister() {
+        return (driver.findElement(By.id("register-button")));
+
+    }
+
+
+
+    }

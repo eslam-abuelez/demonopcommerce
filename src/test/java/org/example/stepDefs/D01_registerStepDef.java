@@ -42,6 +42,31 @@ public class D01_registerStepDef  {
     public void birthYear (){
         register.birthYear().sendKeys("2006");
     }
+
+
+
+
+    @Then("user enter email \"Islam@example.com\" field")
+    public void email(){
+        register.email().sendKeys("Islam@example.com");
+    }
+
+    @Then("user fills Password field P@ssw0rd")
+    public void passwords(){
+        register.passwords().sendKeys("P@ssw0rd");
+    }
+    @Then("user confirm \"P@ssw0rd\"")
+    public void confirmPasswords(){
+        register.passwords().sendKeys("P@ssw0rd");
+    }
+
+    @Then("user clicks on register button")
+    public void clickRegister(){
+        register.clickRegister().click();
+    }
+
+
+
 }
 
 
