@@ -54,7 +54,7 @@ public class P01_register {
 
     }
     public WebElement confirmPasswords() {
-        return (driver.findElement(By.name("ConfirmPassword")));
+        return (driver.findElement(By.id("ConfirmPassword")));
 
     }
 
@@ -67,7 +67,7 @@ public class P01_register {
 
 
     public WebElement successMSG() {
-        return (driver.findElement(By.id("register-button")));
+        return (driver.findElement(By.className("result")));
 
     }
 

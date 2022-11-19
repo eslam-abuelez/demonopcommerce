@@ -5,6 +5,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.P01_register;
+import org.openqa.selenium.By;
+import org.testng.asserts.SoftAssert;
+
+import static org.example.stepDefs.Hooks.driver;
+
 public class D01_registerStepDef  {
 
     P01_register register = new P01_register();
@@ -57,7 +62,7 @@ public class D01_registerStepDef  {
     }
     @Then("user confirm \"P@ssw0rd\"")
     public void confirmPasswords(){
-        register.passwords().sendKeys("P@ssw0rd");
+        register.confirmPasswords().sendKeys("P@ssw0rd");
     }
 
     @Then("user clicks on register button")
@@ -68,12 +73,25 @@ public class D01_registerStepDef  {
 
 
 
-//    @Then("success message is displayed")
-//    public void successMSG(){
-//        register.successMSG().getText"Your registration completed" ;
-//    }
+    @Then("success message is displayed")
+    public void successMSG(){
 
 
-}
+        String successMSG = driver.findElement(By.className("result")).getText();
+        String successMSGColor = driver.findElement(By.className("result")).getCssValue("color");
+        // First Assertion
+        SoftAssert soft = new SoftAssert();
+        soft.assertTrue(successMSG.contains("Your registration completed"));
+        // second Assertion
+
+        soft.assertEquals(successMSGColor, "rgba(76, 177, 124, 1)");
+        // Assert All
+        soft.assertAll();
+    }
+
+    }
+
+
+
 
 
