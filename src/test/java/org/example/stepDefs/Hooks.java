@@ -14,6 +14,7 @@ public class Hooks {
 
     public static WebDriver driver;
 
+
     @Before
     public static void OpenBrowser() {
         // 1- Bridge
@@ -30,8 +31,8 @@ public class Hooks {
 
 
         // 4- navigate to url
-        driver.get("https://demo.nopcommerce.com/");
 
+         driver.get("https://demo.nopcommerce.com/");
         // 5- Navigate to reg Link
 
 
