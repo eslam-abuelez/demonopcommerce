@@ -2,6 +2,7 @@ package org.example.stepDefs;
 
 import Data.data.JsonDataReader;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.P01_register;
@@ -24,7 +25,7 @@ public class D02_loginStepDef {
     SoftAssert soft = new SoftAssert();
 
 
-    @When("user go to login page")
+    @Given("user go to login page")
     public void userGoToLoginPage() {
         homePage.clickOnLoginLink();
     }

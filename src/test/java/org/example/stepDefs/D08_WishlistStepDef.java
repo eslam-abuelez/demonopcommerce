@@ -23,7 +23,7 @@ public class D08_WishlistStepDef {
         homePage.clickOnWishlistBtnProduct();
     }
 
-    @Then("success message is displayed")
+    @Then("Success message is displayed")
     public void successMessageIsDisplayed() {
 
         // Verify
