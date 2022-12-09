@@ -19,12 +19,9 @@ public class D05_hoverCategoriesStepDef {
     @Then("title of random value is displayed")
     public void titleOfRandomValueIsDisplayed() {
         System.out.println(homePage.pageTitleWebEle().getText());
-        Assert.assertTrue(homePage.pageTitleWebEle().getText().contains("Notebooks"));
+        Assert.assertTrue(homePage.pageTitleWebEle().getText().contains("DeskTop"));
 
     }
 
-//    @When("user hover and select random value again")
-//    public void userHoverAndSelectRandomValueAgain() throws InterruptedException {
-//        homePage.hoverOnAndSelect();
-//    }
+
 }
