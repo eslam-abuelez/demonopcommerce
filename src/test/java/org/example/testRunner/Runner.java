@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions
         (
-                features = "src/main/resources/features",
+                features = "C:\\Islam\\New folder\\Assignment\\Atomation\\demonopcommerce\\src\\test\\java\\org\\example\\features",
                 glue = "org.example.stepDefs",
                 tags = "@smoke",
                 plugin = {"pretty",
