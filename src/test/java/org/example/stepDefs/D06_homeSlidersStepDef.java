@@ -13,6 +13,26 @@ import static org.example.stepDefs.Hooks.driver;
 
 public class D06_homeSlidersStepDef {
     P03_homePage homePage = new P03_homePage(driver);
+
+
+
+
+
+    @When("user click on nokia slider")
+    public void userClickOnNokiaSlider() {
+        homePage.clickOnNokiaSlider();
+    }
+
+    @Then("nokia slider is clickable")
+    public void nokiaSliderIsClickable() {
+        wait.until(ExpectedConditions.urlContains("https://demo.nopcommerce.com/nokia-lumia-1020"));
+        // Verify the directed URL
+        System.out.println(driver.getCurrentUrl());
+
+        // Assert the direction to th exact product url
+
+        Assert.assertEquals(driver.getCurrentUrl(), "https://demo.nopcommerce.com/nokia-lumia-1020");
+    }
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
 
@@ -24,21 +44,9 @@ public class D06_homeSlidersStepDef {
     @Then("iphone slider is clickable")
     public void iphoneSliderIsClickable() {
         wait.until(ExpectedConditions.urlContains("https://demo.nopcommerce.com/iphone-6"));
-        //Verify
+        // Verify the directed URL
         System.out.println(driver.getCurrentUrl());
-        // Assert
+        // Assert the direction to th exact product url
         Assert.assertEquals(driver.getCurrentUrl(), " https://demo.nopcommerce.com/iphone-6");
-    }
-
-    @When("user click on nokia slider")
-    public void userClickOnNokiaSlider() {
-        homePage.clickOnNokiaSlider();
-    }
-
-    @Then("nokia slider is clickable")
-    public void nokiaSliderIsClickable() {
-        wait.until(ExpectedConditions.urlContains("https://demo.nopcommerce.com/nokia-lumia-1020"));
-        System.out.println(driver.getCurrentUrl());
-        Assert.assertEquals(driver.getCurrentUrl(), "https://demo.nopcommerce.com/nokia-lumia-1020");
     }
 }
